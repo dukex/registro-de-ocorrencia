@@ -1,0 +1,31 @@
+%h1 Listing occurrences
+
+%table
+  %tr
+    %th Name
+    %th Address
+    %th Neighborhood
+    %th Location
+    %th Ref point
+    %th Phone
+    %th Category
+    %th
+    %th
+    %th
+
+  - @occurrences.each do |occurrence|
+    %tr
+      %td= occurrence.name
+      %td= occurrence.address
+      %td= occurrence.neighborhood
+      %td= occurrence.location
+      %td= occurrence.ref_point
+      %td= occurrence.phone
+      %td= occurrence.category
+      %td= link_to 'Show', occurrence
+      %td= link_to 'Edit', edit_occurrence_path(occurrence)
+      %td= link_to 'Destroy', occurrence, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Occurrence', new_occurrence_path

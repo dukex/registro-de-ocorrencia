@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @occurrence.name
+%p
+  %b Address:
+  = @occurrence.address
+%p
+  %b Neighborhood:
+  = @occurrence.neighborhood
+%p
+  %b Location:
+  = @occurrence.location
+%p
+  %b Ref point:
+  = @occurrence.ref_point
+%p
+  %b Phone:
+  = @occurrence.phone
+%p
+  %b Category:
+  = @occurrence.category
+
+= link_to 'Edit', edit_occurrence_path(@occurrence)
+\|
+= link_to 'Back', occurrences_path
