@@ -1,0 +1,190 @@
+@import "blueprint/reset"
+@import "compass/css3/border-radius"
+@import "compass/css3/box-shadow"
+
+*
+  margin:  0
+  padding: 0
+
+html, body
+  height: 100%
+
+html
+  min-width: 890px
+
+img
+  border: 0
+  vertical-align: top
+  text-align: left
+
+object
+  vertical-align: top
+  outline: none
+
+ul, ol
+  list-style: none
+
+table, table td
+  padding: 0
+  border: none
+  border-collapse: collapse
+
+a
+  color: #000
+  outline: none
+
+a:hover
+  text-decoration: none
+
+h1
+  font-size: 50px
+  line-height: 40px
+  padding-bottom: 10px
+
+h1 a
+  color: #000
+  text-decoration: none
+
+h2
+  font-size: 24px
+  font-weight: normal
+  color: #444
+  margin-bottom: 5px
+
+h3
+  font-size: 14px
+  font-weight: normal
+  color: #f94c75
+  margin-bottom: 2px
+  background:  url(../images/line-hor.gif) 0 100% repeat-x
+  padding: 0 0 2px 0
+  margin-bottom: 17px
+
+h4
+  font-size: 1em
+  color: #000
+  margin-bottom: 14px
+  font-weight: normal
+
+h5
+  font-size: 12px
+  margin-bottom: 14px
+
+h6
+  font-size: 1em
+  color: #000
+  font-weight: normal
+
+body
+  background:  url(../images/tail-top.gif) 0 0 repeat-x #fff
+  font-family: Arial, Helvetica, sans-serif
+  font-size: 100%
+  line-height: 1.0625em
+  color: #807e83
+
+  & > div
+    width: 890px
+    margin:  0 auto
+    font-size: .8125em
+    position: relative
+
+    header
+      height: 140px
+      h2
+        margin: 13px 0 0 0
+        color: #aeaeae
+        font-size: 15px
+      h1
+        float: left
+        margin: 25px 20px 0 0
+        width: 220px
+      #info
+        float: left
+        margin: 30px 0 0
+        width: 650px
+
+    aside
+      float: left
+      width: 225px
+      margin-left: 47px
+
+    #content
+      overflow: hidden
+      float: left
+      width: 618px
+      background:  url(../images/line-hor.gif) 0 0 repeat-x
+      padding: 15px 0 0 0
+
+
+    #content section
+      padding-bottom: 30px
+
+    footer
+      clear: both
+      margin: 30px 0 0 0
+      font-size: 11px
+      color: #807e83
+//
+  @import "partials/base"
+  @import "blueprint"
+  @import "blueprint/scaffolding"
+
+
+  body
+    +blueprint-utilities
+    +blueprint-debug
+    +blueprint-interaction
+    +blueprint-scaffolding
+
+    #container
+      +container
+
+    header, footer
+      +column($blueprint-grid-columns, true)
+
+    header h1
+      font-size: 40px
+    aside
+      $sidebar-columns: floor($blueprint-grid-columns / 3)
+      +column($sidebar-columns)
+
+
+    #content
+      $content-columns: ceil(2 * $blueprint-grid-columns / 3)
+      +column($content-columns, true)
+
+
+    form
+      +blueprint-form
+
+      fieldset
+        border: 0
+
+        label
+          display: inline-block
+          width: 120px
+
+
+
+      input[type=submit]
+        background: #222 url(../images/overlay.png) repeat-x
+        display: inline-block
+        padding: 5px 10px 6px
+        color: #fff
+        text-decoration: none
+        +border-radius(6px)
+        +box-shadow
+        border: 0px
+          bottom: 1px solid rgba(0,0,0,0.25)
+
+        position: relative
+        cursor: pointer
+
+      input[type=submit]:hover
+        background-color: #111
+        color: #fff
+
+      ol
+        padding: 0
+        margin: 0
+        list-style-type: none
