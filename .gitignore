@@ -23,4 +23,5 @@ gems
 spec/requests
 spec/routing
 spec/views
-capybara*
+capybara*.sass-cache
+.sass-cache/
