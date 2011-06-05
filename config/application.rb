@@ -8,12 +8,12 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module Defesacivil
   class Application < Rails::Application
-config.generators do |g|
-  g.template_engine :haml
-  g.test_framework  :rspec, :fixture => true, :views => false
-  g.integration_tool :rspec, :fixture => true, :views => true
-  g.fixture_replacement :factory_girl, :dir => "spec/support/factories"
-end
+    config.generators do |g|
+      g.template_engine :haml
+      g.test_framework  :rspec, :fixture => true, :views => false
+      g.integration_tool :rspec, :fixture => true, :views => true
+      g.fixture_replacement :factory_girl, :dir => "spec/support/factories"
+    end
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -35,7 +35,7 @@ end
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+    config.i18n.default_locale = :"pt-BR"
 
     # JavaScript files you want as :defaults (application.js is always included).
     config.action_view.javascript_expansions[:defaults] = %w()
