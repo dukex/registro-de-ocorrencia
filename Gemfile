@@ -6,10 +6,11 @@ gem 'compass'
 gem 'friendly_id'
 gem 'formtastic'
 gem 'devise'
-gem "inherited_resources", ">=1.1.2"
-
+gem "inherited_resources", "=1.2.1"
+gem "geocoder"
 
 group :development do
+  gem "rails3-generators", :git => "git://github.com/indirect/rails3-generators.git"
 end
 
 group :test, :development do
@@ -19,7 +20,7 @@ group :test, :development do
 end
 
 group :test do
-  gem "rspec", ">=2.0.1"
+  gem "rspec", ">=2.6.0"
   gem "remarkable", ">=4.0.0.alpha4"
   gem "remarkable_activemodel", ">=4.0.0.alpha4"
   gem "remarkable_activerecord", ">=4.0.0.alpha4"

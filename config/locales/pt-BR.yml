@@ -1,0 +1,19 @@
+"pt-BR":
+  activerecord:
+    errors:
+      models:
+        occurrence:
+          attributes:
+            name:
+              blank: "Não pode ser vazio"
+            address:
+              blank: "Não pode ser vazio"
+  formtastic:
+    labels:
+      address: "Endereço"
+      category: "Categoria"
+      location: "Localização"
+      name: "Nome"
+      neighborhood: "Bairro"
+      ref_point: "Ponto de Referencia"
+      phone: "Telefone"
