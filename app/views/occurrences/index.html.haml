@@ -1,31 +1,29 @@
-%h1 Listing occurrences
+%h2
+  Ocorrencias
+  = link_to "Ver no Mapa", "#"
 
-%table
-  %tr
-    %th Name
-    %th Address
-    %th Neighborhood
-    %th Location
-    %th Ref point
-    %th Phone
-    %th Category
-    %th
-    %th
-    %th
-
-  - @occurrences.each do |occurrence|
+%table#occurrences
+  %thead
     %tr
-      %td= occurrence.name
-      %td= occurrence.address
-      %td= occurrence.neighborhood
-      %td= occurrence.location
-      %td= occurrence.ref_point
-      %td= occurrence.phone
-      %td= occurrence.category
-      %td= link_to 'Show', occurrence
-      %td= link_to 'Edit', edit_occurrence_path(occurrence)
-      %td= link_to 'Destroy', occurrence, :confirm => 'Are you sure?', :method => :delete
+      %th Nome
+      %th Endereço
+      %th Bairro
+      %th Localização
+      %th Referencia
+      %th Telefone
+      %th Desastre
+  %tbody
+    - @occurrences.each do |occurrence|
+      %tr{:class => cycle("", "odd")}
+        %td= occurrence.name
+        %td= occurrence.address
+        %td= occurrence.neighborhood
+        %td= occurrence.location
+        %td= occurrence.ref_point
+        %td= occurrence.phone
+        %td= occurrence.category.name
 
-%br
 
-= link_to 'New Occurrence', new_occurrence_path
+= content_for :sidebar do
+  %ul
+    %li= link_to "Nova Ocorrencia", new_occurrence_path
