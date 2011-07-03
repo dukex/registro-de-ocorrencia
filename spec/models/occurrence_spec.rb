@@ -5,4 +5,5 @@ describe Occurrence do
   should_validate_presence_of :name
   should_validate_presence_of :address
   should_validate_presence_of :city
+  should_validate_presence_of :state
 end
