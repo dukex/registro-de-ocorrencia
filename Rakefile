@@ -4,9 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Defesacivil::Application.load_tasks
-
-MetricFu::Configuration.run do |config|
-  config.rcov[:rcov_opts] << "-Ispec"
-end rescue nil
-
+RegistroDeOcorrencia::Application.load_tasks
