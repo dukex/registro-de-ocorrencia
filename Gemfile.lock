@@ -156,6 +156,6 @@ DEPENDENCIES
   remarkable (>= 4.0.0.alpha4)
   remarkable_activemodel (>= 4.0.0.alpha4)
   remarkable_activerecord (>= 4.0.0.alpha4)
-  rspec (>= 2.0.1)
+  rspec (>= 2.6.0)
   rspec-rails
   sqlite3
