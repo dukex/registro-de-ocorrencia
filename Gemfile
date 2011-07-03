@@ -12,6 +12,7 @@ gem "inploy"
 
 group :development do
   gem "rails3-generators", :git => "git://github.com/indirect/rails3-generators.git"
+  gem "faker"
 end
 
 group :test, :development do
