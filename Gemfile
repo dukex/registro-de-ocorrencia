@@ -24,12 +24,12 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug'
 
-#gem 'haml-rails'
+gem 'haml-rails'
 #gem 'compass'
 #gem 'friendly_id'
 #gem 'formtastic'
 #gem 'devise'
-#gem 'inherited_resources', '=1.2.1'
+gem 'inherited_resources', '=1.2.1'
 #gem 'geocoder'
 #gem 'inploy'
 #
