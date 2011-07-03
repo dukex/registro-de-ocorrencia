@@ -8,6 +8,7 @@ gem 'formtastic'
 gem 'devise'
 gem "inherited_resources", "=1.2.1"
 gem "geocoder"
+gem "inploy"
 
 group :development do
   gem "rails3-generators", :git => "git://github.com/indirect/rails3-generators.git"
