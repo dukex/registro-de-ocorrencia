@@ -18,6 +18,7 @@ group :test, :development do
   gem 'sqlite3'
   gem "factory_girl_rails"
   gem 'rspec-rails'
+  gem 'rake', '= 0.8.7'
 end
 
 group :test do
