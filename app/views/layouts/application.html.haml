@@ -11,8 +11,8 @@
   %body
     %div
       %header
-        %h2 Defesa Civil
-        %h1= link_to raw("Registro de<br />Ocorrências"), "#"
+        %h2 Defesa Civil </h2>
+        %h1= link_to raw("Nome do<br /> Sistema"), "#"
         #info
           %p Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
           %p ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
@@ -20,8 +20,3 @@
       #content=yield
       %aside=yield(:sidebar)
       %footer
-    %script{ :type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" }
-    %script{ :type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js" }
-    = yield :javascripts
-    = raw javascript_include_merged(:application)
-

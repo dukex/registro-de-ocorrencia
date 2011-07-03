@@ -1,5 +1,6 @@
 %h2
   Ocorrencias
+  = link_to "Ver no Mapa", "#"
 
 %table#occurrences
   %thead
@@ -24,22 +25,5 @@
 
 
 = content_for :sidebar do
-  %ul.nav
+  %ul
     %li= link_to "Nova Ocorrencia", new_occurrence_path
-
-  %br/
-
-  #search_form
-    %h2 Busca
-    = form_for :occurrences, :html => { :method => :get } do |form|
-      %label Nome
-      = form.text_field :name, :value => ""
-      %br/
-      %br/
-      %label Endereço
-      = form.text_field :address, :value => ""
-      %br/
-      %br/
-      %input{:type => "submit", :value => "Buscar"}
-
-
