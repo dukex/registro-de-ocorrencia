@@ -7,4 +7,6 @@ Defesacivil::Application.routes.draw do
       #match :map
     end
   end
+
+  root :to => "occurrences#index"
  end
